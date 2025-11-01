@@ -305,7 +305,9 @@ input[type="radio"] {
     display: grid;
     place-content: center;
 }
-.form-control {
+
+/* instructed to remove */
+/* .form-control {
     font-family: system-ui, sans-serif;
     font-size: 2rem;
     font-weight: bold;
@@ -316,7 +318,9 @@ input[type="radio"] {
 }
 .form-control + .form-control {
     margin-top: 1em;
-}
+} */
+
+
 input[type="radio"]::before {
     content: "";
     width: 0.65em;
@@ -383,9 +387,12 @@ header h1+p {
     font-weight: bold;
     font-style: italic;
 }
-#legal h2 {
+
+/* instructed to remove */
+/* #legal h2 {
     visibility: hidden;
-}
+} */
+
 #legal {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -403,6 +410,23 @@ small {
     color: var(--soft-white);
     font-size: .75em;
 }
+
+/* skip links */
+.skip-main, .skip-plan, .skip-testimonials, .skip-destination, .skip-contact{
+    position: absolute;
+    left: 40%;
+    transform: translate(0,-300px);
+    transition: transform 0.3s;
+    background-color: var(--ocean-blue);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.skip-main:focus, .skip-plan:focus, .skip-testimonials:focus, .skip-destination:focus, .skip-contact:focus{
+    transform: translate(0,-200px);
+}
+
 /* ----------------- GLOBAL STYLES (MEDIUM) -----------------*/
 @media screen and (min-width: 920px){
     h1 {
